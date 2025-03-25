@@ -28,8 +28,8 @@ mongoose.connect(process.env.MONOGOB_URI, {
 })
 .then(() => {
     console.log('DB connected');
-    app.listen(5000, () => {
-        console.log('Server started on http://localhost:5000');
+    app.listen(process.env.PORT, () => {
+        console.log('Server started on ',process.env.PORT);
     });
 })
 .catch((error) => {
